@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import CardBox from "../../components/CardBox";
 import NumberButton from "../../components/NumberButton"
 
-export default function EditEvent(){
+export default function EditPackage(){
     return (
     <div>
-      <div className="fw-bold">Add New</div>
+      <div className="fw-bold">Edit Service Package</div>
 
       <CardBox>
           <div className="d-flex align-items-center pb-2 border-bottom justify-content-between">

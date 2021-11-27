@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { MDBBtn, MDBModal, MDBModalBody, MDBModalContent, MDBModalDialog, MDBModalFooter, MDBModalHeader, MDBModalTitle } from "mdb-react-ui-kit";
+import { useState } from "react";
 
 export default function Venue(){
+    const [modal, setModal] = useState(false)
+    const toggleShow = () => setModal(!modal);
     return (
         <div>
       <div className="d-flex mt-2 align-items-center justify-content-between">
@@ -42,9 +46,9 @@ export default function Venue(){
                     <td>Tes</td>
                     <td>Tes</td>
                     <td>
-                        <a href=""><i className="far text-success fa-eye"></i></a>
+                        <Link to="detail"><i className="far text-success fa-eye"></i></Link>
                         <a href=""><i className="far fa-edit mx-2"></i></a>
-                        <a href=""><i className="far text-danger fa-trash-alt"></i></a>
+                        <a onClick={toggleShow}><i className="far text-danger fa-trash-alt"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -52,9 +56,9 @@ export default function Venue(){
                     <td>Tes</td>
                     <td>Tes</td>
                     <td>
-                        <a href=""><i className="far text-success fa-eye"></i></a>
+                        <Link to="detail"><i className="far text-success fa-eye"></i></Link>
                         <a href=""><i className="far fa-edit mx-2"></i></a>
-                        <a href=""><i className="far text-danger fa-trash-alt"></i></a>
+                        <a onClick={toggleShow}><i className="far text-danger fa-trash-alt"></i></a>
                     </td>
                 </tr>
             </tbody>
@@ -79,6 +83,33 @@ export default function Venue(){
             </ul>
         </nav>
     </div>
+
+    <MDBModal show={modal} setShow={setModal} tabIndex='-1'>
+      <MDBModalDialog>
+        <MDBModalContent>
+          <MDBModalHeader className="border-0">
+ 
+            <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+          </MDBModalHeader>
+          <MDBModalBody>
+              <div className="d-flex align-items-center flex-column">
+                  <span className="fa-stack fa-2x" style={{verticalAlign: "top"}}>
+                    <i className="far fa-circle text-danger fa-stack-2x"></i>
+                    <i className="fas fa-times text-danger fa-stack-1x"></i>
+                    </span>
+                    <div className="fs-5 mt-3">Are You Sure ?</div>
+                    <div className="my-3 text-muted">Are you sure want to delete this item permanently?</div>
+              </div>
+              <div className="d-flex mb-5 justify-content-center">
+                  <MDBBtn color='light' rounded="pill" onClick={toggleShow}>
+                    Close
+                  </MDBBtn>
+                  <MDBBtn color="danger" rounded="pill" className="ms-2">Delete</MDBBtn>
+              </div>
+          </MDBModalBody>
+        </MDBModalContent>
+      </MDBModalDialog>
+    </MDBModal>
     </div>
     )
 }

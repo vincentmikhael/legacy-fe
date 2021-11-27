@@ -6,6 +6,9 @@ body {
   border: 2px solid purple !important;
   outline: none;
 }
+.fc .fc-toolbar.fc-header-toolbar {
+  display: none;
+}
 .form-check-input[type="radio"]:checked:after {
   border-color: purple;
   background-color: purple;
@@ -14,10 +17,10 @@ body {
   box-shadow: none;
   outline: none;
 }
-input[type="date"]:required:invalid::-webkit-datetime-edit {
+.form-item input[type="date"]:required:invalid::-webkit-datetime-edit {
   color: transparent;
 }
-input[type="date"]:focus::-webkit-datetime-edit {
+.form-item input[type="date"]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 .feather {
@@ -147,13 +150,17 @@ tr:nth-child(even) {
 select:disabled {
   opacity: 0.6;
 }
-input[type="date"]::-webkit-calendar-picker-indicator {
+.form-item input[type="date"]::-webkit-calendar-picker-indicator {
   color: transparent;
   background: none;
   z-index: 1;
 }
+.img-user {
+  width: 35px;
+  height: 35px;
+}
 
-input[type="date"]:before {
+.form-item input[type="date"]:before {
   color: transparent;
   background: none;
   display: block;

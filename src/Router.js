@@ -11,8 +11,10 @@ import Food from "./views/foods/Food";
 import Inventories from "./views/inventories/Inventories";
 import InventoriesPengajuan from "./views/inventories/InventoriesPengajuan";
 import AddPackage from "./views/packages/AddPackage";
+import EditPackage from "./views/packages/EditPackage";
 import Package from "./views/packages/Package";
 import AddStaff from "./views/staffs/AddStaff";
+import CalenderStaff from "./views/staffs/CalenderStaff";
 import DetailStaff from "./views/staffs/DetailStaff";
 import Staff from "./views/staffs/Staff";
 import AddVendor from "./views/vendors/AddVendor";
@@ -117,6 +119,10 @@ const router = [
     url: "/staff/detail",
     component: <DetailStaff/>
   },
+  {
+    url: "/staff/calender",
+    component: <CalenderStaff/>
+  },
 
   {
     url: "/services",
@@ -127,6 +133,10 @@ const router = [
   {
     url: "/services/add",
     component: <AddPackage/>
+  },
+  {
+    url: "/services/edit",
+    component: <EditPackage/>
   }
 ]
 

@@ -59,7 +59,7 @@ export default function Events(){
                     <td>Tes</td>
                     <td>
                         <a href=""><i className="far text-success fa-eye"></i></a>
-                        <a href=""><i className="far fa-edit mx-2"></i></a>
+                        <Link to="/events/edit"><i className="far fa-edit mx-2"></i></Link>
                         <a href=""><i className="far text-danger fa-trash-alt"></i></a>
                     </td>
                 </tr>

@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./views/dashboard/Dashboard";
 import router from './Router.js';
+import UserMenu from "./components/UserMenu";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
         <h5 className="font-weight-bold">Dashboard</h5>
         <div className="btn-toolbar mb-2 mb-md-0">
-          dd
+          <UserMenu />
         </div>
       </div>
         
